@@ -7,12 +7,11 @@ RUN apt-get update
 RUN apt-get update --fix-missing
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
+RUN apt-get update
+RUN apt-get update --fix-missing
 
 RUN apt-get install -y nodejs
-RUN npm install -g sails grunt
-RUN npm install -g sails-generate-auth
-RUN npm install -g passport bcryptjs validator
-RUN npm install -g passport-google-oauth passport-local
+RUN npm install -g express sails grunt-cli
 RUN npm install -g bower mocha should assert
 RUN apt-get update --fix-missing
 
