@@ -26,7 +26,7 @@ ADD ./config/supervisord.conf /etc/supervisor/conf.d/supervisord-nodejs.conf
 
 RUN ln -s /usr/bin/nodejs /usr/local/bin/node
 
-EXPOSE 1337
+EXPOSE 3000
 
 WORKDIR /var/www
 
