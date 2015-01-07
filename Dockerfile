@@ -9,7 +9,7 @@ RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 RUN apt-get install -y nodejs
-RUN npm install -g sails grunt-cli
+RUN npm install -g sails grunt
 RUN npm install -g sails-generate-auth
 RUN npm install -g passport bcryptjs validator
 RUN npm install -g passport-google-oauth passport-local
@@ -27,6 +27,7 @@ ADD ./config/supervisord.conf /etc/supervisor/conf.d/supervisord-nodejs.conf
 RUN ln -s /usr/bin/nodejs /usr/local/bin/node
 
 EXPOSE 3000
+EXPOSE 1337
 
 WORKDIR /var/www
 
